@@ -74,17 +74,17 @@ const useWordle = (solution) => {
     {
         if (key === 'Enter') {
             if (turn > 5 ){
-                console.log('you used all your guesses')
+
                 return
             }
 
             if (history.includes(currentGuess)){
-                console.log('you already tried that word')
+
                 return
             }
 
             if (currentGuess.length !== 5){
-                console.log('word must be 5 letters long')
+
                 return
             }
             const formatted = formatGuess()
