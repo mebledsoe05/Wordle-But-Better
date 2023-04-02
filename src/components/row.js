@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Row({guess, currentGuess}) {
+
     if (guess) {
         return(
             <div className ="row past">
@@ -25,13 +26,26 @@ export default function Row({guess, currentGuess}) {
             </div>
         )
     }
-    return (
-        <div className ="row">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    )
+    // if (solution.length === 6)
+    //     return (
+    //     <div className ="row">
+    //         <div></div>
+    //         <div></div>
+    //         <div></div>
+    //         <div></div>
+    //         <div></div>
+    //         <div></div>
+    //     </div>
+    // )
+    //
+    // else
+        return (
+            <div className ="row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        )
 }

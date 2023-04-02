@@ -90,6 +90,10 @@
         "word": "hello",
         "id": 15
       }
-    ]
+    ],
+  "sixLetters" :[
+    {"word": "ninjas",
+      "id": 1 }
+  ]
   }
 

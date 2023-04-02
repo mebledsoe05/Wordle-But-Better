@@ -5,9 +5,10 @@ function App() {
     const [solution, setSolution] = useState(null)
 
     useEffect(() => {
-        fetch(' http://localhost:3001/solutions')
+        fetch(' http://localhost:3001/sixLetters')
             .then(res => res.json())
             .then(json => {
+                console.log("sol ", json)
                 const randomSolution = json[Math.floor(Math.random() * json.length)]
                 setSolution(randomSolution.word)
         })
