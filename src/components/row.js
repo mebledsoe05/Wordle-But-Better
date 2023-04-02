@@ -26,26 +26,16 @@ export default function Row({guess, currentGuess, solutionLength}) {
             </div>
         )
     }
-    if (solutionLength === 6)
-        return (
-        <div className ="row">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+    let numOfBox = () => {
+        for (let i = 1; i <= solutionLength; i++) {
+            numOfBox += <div></div>
+        }
+    }
+
+    return (
+        <div className="row">
+            {numOfBox()}
         </div>
     )
-
-    else
-        return (
-            <div className ="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        )
 }
