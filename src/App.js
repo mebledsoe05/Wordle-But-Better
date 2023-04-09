@@ -3,15 +3,38 @@ import {useEffect, useState} from "react";
 import Wordle from "./components/Wordle";
 function App() {
     const [solution, setSolution] = useState(null)
-
+    let numOfLetters = 7
     useEffect(() => {
-        fetch(' http://localhost:3001/sixLetters')
-            .then(res => res.json())
-            .then(json => {
-                console.log("sol ", json)
-                const randomSolution = json[Math.floor(Math.random() * json.length)]
-                setSolution(randomSolution.word)
-        })
+        if (numOfLetters === 5) {
+            fetch('http://localhost:3001/solutions')
+                .then(res => res.json())
+                .then(json => {
+                    console.log("sol ", json)
+                    const randomSolution = json[Math.floor(Math.random() * json.length)]
+                    setSolution(randomSolution.word)
+                })
+        }
+
+        if (numOfLetters === 6){
+            fetch('http://localhost:3001/sixLetters')
+                .then(res => res.json())
+                .then(json => {
+                    console.log("sol ", json)
+                    const randomSolution = json[Math.floor(Math.random() * json.length)]
+                    setSolution(randomSolution.word)
+                })
+        }
+
+        if (numOfLetters === 7) {
+            fetch('http://localhost:3001/sevenLetters')
+                .then(res => res.json())
+                .then(json => {
+                    console.log("sol ", json)
+                    const randomSolution = json[Math.floor(Math.random() * json.length)]
+                    setSolution(randomSolution.word)
+                })
+        }
+
     },[setSolution])
   return (
     <div className="App">

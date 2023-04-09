@@ -38,6 +38,19 @@ export default function Row({guess, currentGuess, solutionLength}) {
             </div>
         )
 
+   else if (solutionLength === 7)
+        return (
+            <div className ="row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        )
+
     else
         return (
             <div className ="row">

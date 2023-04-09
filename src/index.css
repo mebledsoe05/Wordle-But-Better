@@ -69,6 +69,10 @@ h1 {
   animation-delay: 1.0s;
 }
 
+.row > div:nth-child(7){
+  animation-delay: 1.2s;
+}
+
 .row.current > div.filled {
   animation: bounce 0.2s ease-in-out forwards;
 }
