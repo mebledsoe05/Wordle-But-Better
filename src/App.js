@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import Wordle from "./components/Wordle";
 function App() {
     const [solution, setSolution] = useState(null)
-    let numOfLetters = 7
+    let numOfLetters = 5
     useEffect(() => {
         if (numOfLetters === 5) {
             fetch('http://localhost:3001/solutions')

@@ -26,51 +26,52 @@ export default function Row({guess, currentGuess, solutionLength}) {
             </div>
         )
     }
-    if (solutionLength === 6)
-        return (
-            <div className ="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        )
-
-   else if (solutionLength === 7)
-        return (
-            <div className ="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        )
-
-    else
-        return (
-            <div className ="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        )
-}
-//     let numOfBox = () => {
-//         for (let i = 1; i <= solutionLength; i++) {
-//             numOfBox += <div></div>
-//         }
-//     }
+//     if (solutionLength === 6)
+//         return (
+//             <div className ="row">
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//             </div>
+//         )
 //
-//     return (
-//         <div className="row">
-//             {numOfBox()}
-//         </div>
-//     )
+//    else if (solutionLength === 7)
+//         return (
+//             <div className ="row">
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//             </div>
+//         )
+//
+//     else
+//         return (
+//             <div className ="row">
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//                 <div></div>
+//             </div>
+//         )
 // }
+        let numOfBoxes = []
+        for (let i = 1; i <= solutionLength; i++) {
+            numOfBoxes.push(<div></div>)
+
+        }
+
+
+    return (
+        <div className="row">
+            {numOfBoxes}
+        </div>
+    )
+}
