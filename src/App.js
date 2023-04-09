@@ -1,9 +1,10 @@
 import './App.css'
 import {useEffect, useState} from "react";
 import Wordle from "./components/Wordle";
+import IntroModal from "./components/introModal"
 function App() {
     const [solution, setSolution] = useState(null)
-    let numOfLetters = 5
+    let numOfLetters
     useEffect(() => {
         if (numOfLetters === 5) {
             fetch('http://localhost:3001/solutions')
@@ -38,8 +39,9 @@ function App() {
     },[setSolution])
   return (
     <div className="App">
-        <h1>Wordle </h1>
-        {solution && <Wordle solution={solution} />}
+        <IntroModal/>
+        {numOfLetters &&<h1>Wordle </h1>}
+        {solution && numOfLetters && <Wordle solution={solution} />}
     </div>
   );
 }
