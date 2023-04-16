@@ -7,7 +7,6 @@ function App() {
     const [solution, setSolution] = useState(null)
     function handleClick(event) {
         console.log('button pressed', event.target.value)
-        document.getElementById("btn").innerHTML = "You have chosen _____ letters";
         if (event.target.value === '5') {
             fetch('http://localhost:3001/solutions')
                 .then(res => res.json())
@@ -40,6 +39,16 @@ function App() {
                     console.log(solution)
                 })
         }
+        if (event.target.value === '15') {
+            fetch('http://localhost:3001/secret')
+                .then(res => res.json())
+                .then(json => {
+                    console.log("sol ", json)
+                    const randomSolution = json[Math.floor(Math.random() * json.length)]
+                    setSolution( randomSolution.word)
+                    console.log(solution)
+                })
+        }
 
     }
   return (
@@ -51,6 +60,7 @@ function App() {
                 <button value = '5' onClick={handleClick}>5 Letter Solutions</button>
                 <button value = '6' onClick={handleClick}>6 Letter Solutions</button>
                 <button value = '7' onClick={handleClick}>7 Letter Solutions</button>
+                <button value = '15' onClick={handleClick}>secret DO NOT PRESS!</button>
                 <p id="btn"></p>
             </div>
             </div>}
