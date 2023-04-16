@@ -1,46 +1,65 @@
 import './App.css'
-import {useEffect, useState} from "react";
+import react from "react";
+import {useState} from "react";
 import Wordle from "./components/Wordle";
-import IntroModal from "./components/introModal"
+
 function App() {
     const [solution, setSolution] = useState(null)
-    let numOfLetters
-    useEffect(() => {
-        if (numOfLetters === 5) {
+    const [numOfLetters, setNumOfLetters] = useState(null)
+    function handleClick(event) {
+        console.log('button pressed', event.target.value)
+        setNumOfLetters(event.target.value)
+        document.getElementById("btn").innerHTML = "You have chosen _____ letters";
+        console.log(numOfLetters)
+        this.setState({state:this.state})
+        if (numOfLetters === '5') {
+            console.log("num of letters", numOfLetters)
             fetch('http://localhost:3001/solutions')
                 .then(res => res.json())
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
                     setSolution(randomSolution.word)
+                    console.log(solution)
                 })
         }
 
-        if (numOfLetters === 6){
+        if (numOfLetters === '6'){
             fetch('http://localhost:3001/sixLetters')
                 .then(res => res.json())
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
                     setSolution(randomSolution.word)
+                    console.log(solution)
                 })
         }
 
-        if (numOfLetters === 7) {
+        if (numOfLetters === '7') {
             fetch('http://localhost:3001/sevenLetters')
                 .then(res => res.json())
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution(randomSolution.word)
+                    setSolution( randomSolution.word)
+                    console.log(solution)
                 })
         }
 
-    },[setSolution])
+    }
   return (
-    <div className="App">
-        <IntroModal/>
-        {numOfLetters &&<h1>Wordle </h1>}
+      <div className="App">
+          {!numOfLetters && !solution && <div className="introModal">
+            <div className="introModalHeader">
+                <h1>Welcome to Wordle but Better!</h1>
+                <p> Please slecet the number of letters you want in the solution. The more there are the harder it is.</p>
+                <button value = '5' onClick={handleClick}>5 Letter Solutions</button>
+                <button value = '6' onClick={handleClick}>6 Letter Solutions</button>
+                <button value = '7' onClick={handleClick}>7 Letter Solutions</button>
+                <p id="btn"></p>
+            </div>
+            </div>}
+        {numOfLetters && solution && <h1>Wordle </h1>}
         {solution && numOfLetters && <Wordle solution={solution} />}
     </div>
   );

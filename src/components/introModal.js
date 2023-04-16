@@ -1,15 +1,20 @@
-import react from "react"
+import react, {useState} from "react"
 
 export default function IntroModal() {
-    function clickText() {
-        document.getElementById("btn").innerHTML = "You have clicked on JavaScript button";
+    const [numOfLetters, setNumOfLetters] = useState(null)
+    function handleClick(event) {
+        console.log('button pressed', event.target.value)
+        setNumOfLetters(event.target.value)
+        document.getElementById("btn").innerHTML = "You have chosen _____ letters";
     }
     return (
         <div className="introModal">
             <div className="introModalHeader">
                 <h1>Welcome to Wordle but Better!</h1>
                 <p> Please slecet the number of letters you want in the solution. The more there are the harder it is.</p>
-                <button onClick={clickText}>Click to show text</button>
+                <button value = '5' onClick={handleClick}>5 Letter Solutions</button>
+                <button value = '6' onClick={handleClick}>6 Letter Solutions</button>
+                <button value = '7' onClick={handleClick}>7 Letter Solutions</button>
                 <p id="btn"></p>
             </div>
         </div>
