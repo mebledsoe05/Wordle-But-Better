@@ -118,8 +118,15 @@ h1 {
   top: 0;
   left: 0;
 }
-
-.modal, .introModal div {
+.introModal div {
+  max-width: 480px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 10% auto;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.modal div {
   max-width: 480px;
   background: #fff;
   padding: 40px;
@@ -130,6 +137,7 @@ h1 {
 .modal .solution {
   color: #ff004c;
   font-weight: bold;
+  font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
