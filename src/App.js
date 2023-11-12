@@ -8,6 +8,7 @@ function App() {
     function handleClick(event) {
         console.log('button pressed', event.target.value)
         if (event.target.value === '5') {
+
                     setSolution("hello")
                     console.log(solution)
                 })
