@@ -5,6 +5,7 @@ import Wordle from "./components/Wordle";
 
 function App() {
     const [solution, setSolution] = useState(null)
+
     function handleClick(event) {
         console.log('button pressed', event.target.value)
         if (event.target.value === '5') {
@@ -18,7 +19,7 @@ function App() {
                 })
         }
 
-        if (event.target.value === '6'){
+        if (event.target.value === '6') {
             fetch('http://localhost:3001/sixLetters')
                 .then(res => res.json())
                 .then(json => {
@@ -35,7 +36,7 @@ function App() {
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution( randomSolution.word)
+                    setSolution(randomSolution.word)
                     console.log(solution)
                 })
         }
@@ -45,29 +46,31 @@ function App() {
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution( randomSolution.word)
+                    setSolution(randomSolution.word)
                     console.log(solution)
                 })
         }
-
     }
-  return (
-      <div className="App">
-          {!solution && <div className="introModal">
-            <div className="introModalHeader">
-                <h1>Welcome to Wordle but Better!</h1>
-                <p> Please slecet the number of letters you want in the solution. The more there are the harder it is.</p>
-                <button value = '5' onClick={handleClick}>5 Letter Solutions</button>
-                <button value = '6' onClick={handleClick}>6 Letter Solutions</button>
-                <button value = '7' onClick={handleClick}>7 Letter Solutions</button>
-                <button value = '15' onClick={handleClick}>secret DO NOT PRESS!</button>
-                <p id="btn"></p>
-            </div>
+
+
+    return (
+        <div className="App">
+            {!solution && <div className="introModal">
+                <div className="introModalHeader">
+                    <h1>Welcome to Wordle but Better!</h1>
+                    <p> Please slecet the number of letters you want in the solution. The more there are the harder it
+                        is.</p>
+                    <button value='5' onClick={handleClick}>5 Letter Solutions</button>
+                    <button value='6' onClick={handleClick}>6 Letter Solutions</button>
+                    <button value='7' onClick={handleClick}>7 Letter Solutions</button>
+                    <button value='15' onClick={handleClick}>secret DO NOT PRESS!</button>
+                    <p id="btn"></p>
+                </div>
             </div>}
-        {solution && <h1>Wordle </h1>}
-        {solution && <Wordle solution={solution} />}
-    </div>
-  );
+            {solution && <h1>Wordle </h1>}
+            {solution && <Wordle solution={solution}/>}
+        </div>
+    );
 }
 
 export default App
