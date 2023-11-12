@@ -8,10 +8,7 @@ function App() {
     function handleClick(event) {
         console.log('button pressed', event.target.value)
         if (event.target.value === '5') {
-            fetch('http://localhost:3001/solutions')
-                .then(res => res.json())
-                .then(json => {
-                    console.log("sol ", json)
+
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
                     setSolution("hello")
                     console.log(solution)
