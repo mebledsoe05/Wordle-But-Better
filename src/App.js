@@ -8,9 +8,8 @@ function App() {
     function handleClick(event) {
         console.log('button pressed', event.target.value)
         if (event.target.value === '5') {
-            const randomSolution = json[Math.floor(Math.random() * json.length)]
-            setSolution("hello")
-            console.log(solution)
+                    setSolution("hello")
+                    console.log(solution)
                 })
         }
 
