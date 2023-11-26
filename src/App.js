@@ -9,14 +9,79 @@ function App() {
     function handleClick(event) {
         console.log('button pressed', event.target.value)
         if (event.target.value === '5') {
-            fetch('http://localhost:3001/solutions')
-                .then(res => res.json())
-                .then(json => {
-                    console.log("sol ", json)
-                    const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution(randomSolution.word)
-                    console.log(solution)
-                })
+            const solutions = [
+                {
+                    word: "ninja",
+                    id: 1
+                },
+
+
+                {
+                    word: "spade",
+                    id: 2
+                }  ,
+                {
+                    word : "pools",
+                    id : 3
+                },       
+                {        
+                    word : "drive",
+                    id : 4
+                },       
+                {        
+                    word : "relax",
+                    id : 5
+                },       
+                {        
+                    word : "times",
+                    id : 6
+                },       
+                {        
+                    word : "train",
+                    id : 7
+                },       
+                {        
+                    word : "cores",
+                    id : 8
+                },       
+                {        
+                    word : "pours",
+                    id : 9
+                },       
+                {        
+                    word : "blame",
+                    id : 10
+                },       
+                {        
+                    word : "banks",
+                    id : 11
+                },       
+                {        
+                    word : "phone",
+                    id : 12
+                },       
+                {        
+                    word : "bling",
+                    id : 13
+                },       
+                {        
+                    word : "coins",
+                    id : 14
+                },       
+                {        
+                    word : "hello",
+                    id : 15
+                }]
+            const solutionJson = JSON.stringify(solutions)
+            console.log("solutions      ", solutions)
+            console.log('solutionJson    ', solutionJson)
+            // .then(json => {
+            //     console.log("sol ", json)
+            const randomSolution = solutions[Math.floor(Math.random() * solutions.length)]
+            console.log("randomSolution     ", randomSolution)
+            setSolution(randomSolution.word)
+            console.log('solution     ', solution)
+            // })
         }
 
         if (event.target.value === '6') {
@@ -25,6 +90,7 @@ function App() {
                 .then(json => {
                     console.log("sol ", json)
                     const randomSolution = json[Math.floor(Math.random() * json.length)]
+
                     setSolution(randomSolution.word)
                     console.log(solution)
                 })
