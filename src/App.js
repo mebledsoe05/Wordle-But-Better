@@ -21,56 +21,56 @@ function App() {
                     id: 2
                 }  ,
                 {
-                    word : "pools",
-                    id : 3
+                    word: "pools",
+                    id: 3
                 },       
                 {        
-                    word : "drive",
-                    id : 4
+                    word: "drive",
+                    id: 4
                 },       
                 {        
-                    word : "relax",
-                    id : 5
+                    word: "relax",
+                    id: 5
                 },       
                 {        
-                    word : "times",
-                    id : 6
+                    word: "times",
+                    id: 6
                 },       
                 {        
-                    word : "train",
-                    id : 7
+                    word: "train",
+                    id: 7
                 },       
                 {        
-                    word : "cores",
-                    id : 8
+                    word: "cores",
+                    id: 8
                 },       
                 {        
-                    word : "pours",
-                    id : 9
+                    word: "pours",
+                    id: 9
                 },       
                 {        
-                    word : "blame",
-                    id : 10
+                    word: "blame",
+                    id: 10
                 },       
                 {        
-                    word : "banks",
-                    id : 11
+                    word: "banks",
+                    id: 11
                 },       
                 {        
-                    word : "phone",
-                    id : 12
+                    word: "phone",
+                    id: 12
                 },       
                 {        
-                    word : "bling",
-                    id : 13
+                    word: "bling",
+                    id: 13
                 },       
                 {        
-                    word : "coins",
-                    id : 14
+                    word: "coins",
+                    id: 14
                 },       
                 {        
-                    word : "hello",
-                    id : 15
+                    word: "hello",
+                    id: 15
                 }]
             const solutionJson = JSON.stringify(solutions)
             console.log("solutions      ", solutions)
