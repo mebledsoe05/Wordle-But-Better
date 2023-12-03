@@ -87,65 +87,63 @@ function App() {
         if (event.target.value === '6') {
             const solutionsSixLet = [
                 {
-                    word: "ninja",
+                    word: "ninjas",
                     id: 1
                 },
-
-
                 {
-                    word: "spade",
+                    word: "orange",
                     id: 2
-                }  ,
+                },
                 {
-                    word: "pools",
+                    word: "abacus",
                     id: 3
                 },
                 {
-                    word: "drive",
+                    word: "driven",
                     id: 4
                 },
                 {
-                    word: "relax",
+                    word: "baboon",
                     id: 5
                 },
                 {
-                    word: "times",
+                    word: "dabbed",
                     id: 6
                 },
                 {
-                    word: "train",
+                    word: "dabble",
                     id: 7
                 },
                 {
-                    word: "cores",
+                    word: "fabled",
                     id: 8
                 },
                 {
-                    word: "pours",
+                    word: "habit",
                     id: 9
                 },
                 {
-                    word: "blame",
+                    word: "kabuki",
                     id: 10
                 },
                 {
-                    word: "banks",
+                    word: "nachos",
                     id: 11
                 },
                 {
-                    word: "phone",
+                    word: "phoned",
                     id: 12
                 },
                 {
-                    word: "bling",
+                    word: "oafish",
                     id: 13
                 },
                 {
-                    word: "coins",
+                    word: "packed",
                     id: 14
                 },
                 {
-                    word: "hello",
+                    word: "rabbit",
                     id: 15
                 }]
             const solutionJson = JSON.stringify(solutionsSixLet)
@@ -163,65 +161,63 @@ function App() {
         if (event.target.value === '7') {
             const solutionsSevenLett = [
                 {
-                    word: "ninja",
+                    word: "jacuzzi",
                     id: 1
                 },
-
-
                 {
-                    word: "spade",
+                    word: "abandon",
                     id: 2
-                }  ,
+                },
                 {
-                    word: "pools",
+                    word: "babbled",
                     id: 3
                 },
                 {
-                    word: "drive",
+                    word: "fabrics",
                     id: 4
                 },
                 {
-                    word: "relax",
+                    word: "relaxed",
                     id: 5
                 },
                 {
-                    word: "times",
+                    word: "deposit",
                     id: 6
                 },
                 {
-                    word: "train",
+                    word: "gallery",
                     id: 7
                 },
                 {
-                    word: "cores",
+                    word: "harbour",
                     id: 8
                 },
                 {
-                    word: "pours",
+                    word: "fantasy",
                     id: 9
                 },
                 {
-                    word: "blame",
+                    word: "eastern",
                     id: 10
                 },
                 {
-                    word: "banks",
+                    word: "lawsuit",
                     id: 11
                 },
                 {
-                    word: "phone",
+                    word: "hopeful",
                     id: 12
                 },
                 {
-                    word: "bling",
+                    word: "chapter",
                     id: 13
                 },
                 {
-                    word: "coins",
+                    word: "endorse",
                     id: 14
                 },
                 {
-                    word: "hello",
+                    word: "justice",
                     id: 15
                 }]
             const solutionJson = JSON.stringify(solutionsSevenLett)
@@ -238,66 +234,8 @@ function App() {
         if (event.target.value === '15') {
             const solutionsSecret = [
                 {
-                    word: "ninja",
+                    word: "Acrocephalopolysyndactyly",
                     id: 1
-                },
-
-
-                {
-                    word: "spade",
-                    id: 2
-                }  ,
-                {
-                    word: "pools",
-                    id: 3
-                },
-                {
-                    word: "drive",
-                    id: 4
-                },
-                {
-                    word: "relax",
-                    id: 5
-                },
-                {
-                    word: "times",
-                    id: 6
-                },
-                {
-                    word: "train",
-                    id: 7
-                },
-                {
-                    word: "cores",
-                    id: 8
-                },
-                {
-                    word: "pours",
-                    id: 9
-                },
-                {
-                    word: "blame",
-                    id: 10
-                },
-                {
-                    word: "banks",
-                    id: 11
-                },
-                {
-                    word: "phone",
-                    id: 12
-                },
-                {
-                    word: "bling",
-                    id: 13
-                },
-                {
-                    word: "coins",
-                    id: 14
-                },
-                {
-                    word: "hello",
-                    id: 15
                 }]
             const solutionJson = JSON.stringify(solutionsSecret)
             console.log("solutions      ", solutionsSecret)
