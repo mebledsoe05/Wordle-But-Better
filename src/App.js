@@ -234,7 +234,7 @@ function App() {
         if (event.target.value === '15') {
             const solutionsSecret = [
                 {
-                    word: "Acrocephalopolysyndactyly",
+                    word: "acrocephalopolysyndactyly",
                     id: 1
                 }]
             const solutionJson = JSON.stringify(solutionsSecret)
