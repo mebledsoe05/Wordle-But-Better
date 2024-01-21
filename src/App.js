@@ -85,36 +85,168 @@ function App() {
         }
 
         if (event.target.value === '6') {
-            fetch('http://localhost:3001/sixLetters')
-                .then(res => res.json())
-                .then(json => {
-                    console.log("sol ", json)
-                    const randomSolution = json[Math.floor(Math.random() * json.length)]
-
-                    setSolution(randomSolution.word)
-                    console.log(solution)
-                })
+            const solutionsSixLet = [
+                {
+                    word: "ninjas",
+                    id: 1
+                },
+                {
+                    word: "orange",
+                    id: 2
+                },
+                {
+                    word: "abacus",
+                    id: 3
+                },
+                {
+                    word: "driven",
+                    id: 4
+                },
+                {
+                    word: "baboon",
+                    id: 5
+                },
+                {
+                    word: "dabbed",
+                    id: 6
+                },
+                {
+                    word: "dabble",
+                    id: 7
+                },
+                {
+                    word: "fabled",
+                    id: 8
+                },
+                {
+                    word: "habit",
+                    id: 9
+                },
+                {
+                    word: "kabuki",
+                    id: 10
+                },
+                {
+                    word: "nachos",
+                    id: 11
+                },
+                {
+                    word: "phoned",
+                    id: 12
+                },
+                {
+                    word: "oafish",
+                    id: 13
+                },
+                {
+                    word: "packed",
+                    id: 14
+                },
+                {
+                    word: "rabbit",
+                    id: 15
+                }]
+            const solutionJson = JSON.stringify(solutionsSixLet)
+            console.log("solutions      ", solutionsSixLet)
+            console.log('solutionJson    ', solutionJson)
+            // .then(json => {
+            //     console.log("sol ", json)
+            const randomSolution = solutionsSixLet[Math.floor(Math.random() * solutionsSixLet.length)]
+            console.log("randomSolution     ", randomSolution)
+            setSolution(randomSolution.word)
+            console.log('solution     ', solution)
+            // })
         }
 
         if (event.target.value === '7') {
-            fetch('http://localhost:3001/sevenLetters')
-                .then(res => res.json())
-                .then(json => {
-                    console.log("sol ", json)
-                    const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution(randomSolution.word)
-                    console.log(solution)
-                })
+            const solutionsSevenLett = [
+                {
+                    word: "jacuzzi",
+                    id: 1
+                },
+                {
+                    word: "abandon",
+                    id: 2
+                },
+                {
+                    word: "babbled",
+                    id: 3
+                },
+                {
+                    word: "fabrics",
+                    id: 4
+                },
+                {
+                    word: "relaxed",
+                    id: 5
+                },
+                {
+                    word: "deposit",
+                    id: 6
+                },
+                {
+                    word: "gallery",
+                    id: 7
+                },
+                {
+                    word: "harbour",
+                    id: 8
+                },
+                {
+                    word: "fantasy",
+                    id: 9
+                },
+                {
+                    word: "eastern",
+                    id: 10
+                },
+                {
+                    word: "lawsuit",
+                    id: 11
+                },
+                {
+                    word: "hopeful",
+                    id: 12
+                },
+                {
+                    word: "chapter",
+                    id: 13
+                },
+                {
+                    word: "endorse",
+                    id: 14
+                },
+                {
+                    word: "justice",
+                    id: 15
+                }]
+            const solutionJson = JSON.stringify(solutionsSevenLett)
+            console.log("solutions      ", solutionsSevenLett)
+            console.log('solutionJson    ', solutionJson)
+            // .then(json => {
+            //     console.log("sol ", json)
+            const randomSolution = solutionsSevenLett[Math.floor(Math.random() * solutionsSevenLett.length)]
+            console.log("randomSolution     ", randomSolution)
+            setSolution(randomSolution.word)
+            console.log('solution     ', solution)
+            // })
         }
         if (event.target.value === '15') {
-            fetch('http://localhost:3001/secret')
-                .then(res => res.json())
-                .then(json => {
-                    console.log("sol ", json)
-                    const randomSolution = json[Math.floor(Math.random() * json.length)]
-                    setSolution(randomSolution.word)
-                    console.log(solution)
-                })
+            const solutionsSecret = [
+                {
+                    word: "acrocephalopolysyndactyly",
+                    id: 1
+                }]
+            const solutionJson = JSON.stringify(solutionsSecret)
+            console.log("solutions      ", solutionsSecret)
+            console.log('solutionJson    ', solutionJson)
+            // .then(json => {
+            //     console.log("sol ", json)
+            const randomSolution = solutionsSecret[Math.floor(Math.random() * solutionsSecret.length)]
+            console.log("randomSolution     ", randomSolution)
+            setSolution(randomSolution.word)
+            console.log('solution     ', solution)
+            // })
         }
     }
 
